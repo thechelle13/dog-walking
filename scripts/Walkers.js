@@ -6,7 +6,10 @@ document.addEventListener (
     "click",
     (theClickEvent) => {
         const whatWasClicked = theClickEvent.target
+
+        if(whatWasClicked.dataset.type === "walker") {
         window.alert(`This walker works in ${whatWasClicked.dataset.city}`)
+        }
     }
 )
 

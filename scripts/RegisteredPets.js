@@ -6,7 +6,7 @@ document.addEventListener (
     "click", 
     (clickEvent) => {
         const clickTarget = clickEvent.target
-        const walkerId = clickTarget.dataset.walkerforeignkey
+        const walkerId = clickTarget.dataset.walkerKey
         const allWalkers = getWalkers()
             for (const walker of allWalkers) {
                 if(walker.id === parseInt(walkerId)) {
@@ -23,7 +23,7 @@ export const RegisteredPets = () => {
     //     petHTML += `<li>${pet.name}</li>`
     // }
     for (const pet of pets) {
-        petHTML += `<li data-walkerForeignKey="${pet.walkerId}">${pet.name}</li>`
+        petHTML += `<li data-walkerKey="${pet.walkerId}">${pet.name}</li>`
     }
     petHTML += "</ul>"
     return petHTML

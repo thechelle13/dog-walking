@@ -22,7 +22,7 @@ export const Assignments = () => {
     for (const currentPet of pets) {
         const currentPetWalker = findWalker(currentPet, walkers)
         assignmentHTML += `
-            <li>
+            <li data-walkerId="${walkers.id}">
                 ${currentPet.name} is being walked by
                 ${currentPetWalker.name} in ${currentPetWalker.city}
             </li>
